@@ -1,0 +1,19 @@
+#!/usr/bin/env python
+# vim:fileencoding=utf-8
+from calibre.web.feeds.news import AutomaticNewsRecipe
+
+class BasicUserRecipe1772095709(AutomaticNewsRecipe):
+    title          = '中央通讯社'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+
+    feeds          = [
+        ('政治', 'https://feeds.feedburner.com/rsscna/politics'),
+        ('国际', 'https://feeds.feedburner.com/rsscna/intworld'),
+        ('两岸', 'https://feeds.feedburner.com/rsscna/mainland'),
+        ('财经', 'https://feeds.feedburner.com/rsscna/finance'),
+        ('科技', 'https://feeds.feedburner.com/rsscna/technology'),
+        ('生活', 'https://feeds.feedburner.com/rsscna/lifehealth'),
+        ('社会', 'https://feeds.feedburner.com/rsscna/social'),
+    ]
