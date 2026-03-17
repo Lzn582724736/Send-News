@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+# vim:fileencoding=utf-8
+from calibre.web.feeds.news import AutomaticNewsRecipe
+
+class BasicUserRecipe1773758539(AutomaticNewsRecipe):
+    title          = 'My news'
+    oldest_article = 7
+    max_articles_per_feed = 100
+    auto_cleanup   = True
+
+    feeds          = [
+        ('World News', 'https://www.huffpost.com/section/world-news/feed'),
+        ('Yahoo News', 'https://news.yahoo.com/rss/mostviewed'),
+    ]
